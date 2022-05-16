@@ -16,7 +16,9 @@ const Home: NextPage<Data> = ({ name }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const result = await fetch("http://localhost:3000/api/hello");
+  const result = await fetch(
+    "https://main.d1euuk08gej2mt.amplifyapp.com/api/hello"
+  );
   const data: Data = await result.json();
   return {
     props: {
